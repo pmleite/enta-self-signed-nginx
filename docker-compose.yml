@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    image: nginx
+    volumes:
+      - ./cfg:/etc/nginx/
+      - ./src:/var/www/localhost/htdocs
+      - ./crt:/etc/ssl/certs
+      - ./ssl:/etc/ssl/private
+    ports:
+      - 8000:80
+      - 443:443
+
+
+
